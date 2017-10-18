@@ -1,3 +1,6 @@
 var _app = {
-    // configs of the app
+    server : {
+        url : "https://server.dev/streams/{user}"
+    },
+    user : "user_login"
 };
