@@ -27,6 +27,7 @@ gulp.task('concat-js', function() {
         src.push('src/config.dev.js')
 
     src.push('src/background_scripts/main.js')
+    src.push('src/background_scripts/browser-action-icon.js')
     src.push('src/background_scripts/request.js')
 
     return gulp.src(src)
