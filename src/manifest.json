@@ -20,7 +20,8 @@
     },
 
     "permissions": [
-        "<all_urls>"
+        "https://exemple.com",
+        "notifications"
     ]
 
 }

@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
+var rename = require("gulp-rename");
 var watch = require('gulp-watch');
 var argv = require('yargs').argv;
 
@@ -7,9 +8,19 @@ var isProduction = (argv.production === undefined) ? false : true;
 
 gulp.task('make', ['concat-js'], function() {
 
+    if(isProduction) {
+        var m = gulp.src('src/manifest.json')
+    } else {
+        var m = gulp.src('src/manifest.dev.json')
+    }
+
+    m.pipe(rename('manifest.json'))
+    m.pipe(gulp.dest('addon/'))
+
     return gulp.src([
         'src/**',
-        '!src/background_scripts/**'
+        '!src/background_scripts/**',
+        '!src/manifest.*'
     ])
     .pipe(gulp.dest('./addon/'));
 
@@ -21,10 +32,11 @@ gulp.task('concat-js', function() {
 
     src.push('src/assets/js/reqwest.js')
 
-    if(isProduction)
+    if(isProduction) {
         src.push('src/config.js')
-    else
+    } else {
         src.push('src/config.dev.js')
+    }
 
     src.push('src/background_scripts/main.js')
     src.push('src/background_scripts/browser-action-icon.js')

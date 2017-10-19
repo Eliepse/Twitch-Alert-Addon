@@ -1,3 +1,4 @@
 src/config.dev.js
+src/manifest.dev.json
 addon/
 node_modules/
