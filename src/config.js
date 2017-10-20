@@ -9,7 +9,7 @@ var _app = {
             type: 'basic',
             title : 'Live en cours !',
             message: '{user} est actuellement en live.',
-            iconUrl: browser.extension.getURL("assets/icons/stream-on-32.png")
+            iconUrl: chrome.extension.getURL("assets/icons/stream-on-32.png")
         }
     },
     notify: true

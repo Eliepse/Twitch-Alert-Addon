@@ -35,6 +35,6 @@ function changeIcon(state) {
             path = 'assets/icons/stream-off-32.png';
     }
     
-    browser.browserAction.setIcon({ path: path });
+    chrome.browserAction.setIcon({ path: path });
     
 }
