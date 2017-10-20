@@ -4,7 +4,7 @@ function showNotification(params) {
         
         if(value['notifications'] === false) return;
         
-        if(_app.notifications || value['notifications']) {
+        if(_app.notify || value['notifications']) {
             
             params = hydrateObj(params)
             chrome.notifications.create(params)
