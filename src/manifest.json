@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Webpack Example",
+    "name": "Twitch-Alert-Addon",
     "version": "0.1.0",
 
-    "description": "Twitch Live Alert is the core to make extensions that notify you when a live is on.",
+    "description": "Browser addon that notify the user when a defined twitch streamer is streaming live.",
 
     "icons": {
         "32": "assets/icons/stream-off-32.png"
