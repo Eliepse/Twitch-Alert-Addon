@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Twitch-Alert-Addon",
-    "version": "0.1.0",
+    "version": "1.0.0",
 
     "description": "Browser addon that notify the user when a defined twitch streamer is streaming live.",
 
