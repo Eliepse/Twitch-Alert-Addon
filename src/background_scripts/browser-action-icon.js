@@ -1,31 +1,40 @@
-function changeLiveStatut(statut) {
-
-    if(live_statut === statut)
-        return;
-
-    if(statut)
-        live_statut = true
-    else
-        live_statut = false
-
-    refreshPluginIcon()
-
-}
-
 function refreshPluginIcon() {
 
     if(live_statut) {
 
-        browser.browserAction.setIcon({
-            path: 'assets/icons/stream-on-32png'
-        });
+        console.log('Live on !')
+
+        changeIcon('online')
+
+        notify('live_on');
 
     } else {
 
-        browser.browserAction.setIcon({
-            path: 'assets/icons/stream-off-32.png'
-        });
+        console.log('Live off !')
+
+        changeIcon('offline')
 
     }
 
+}
+
+function changeIcon(state) {
+    
+    var path;
+    
+    switch(state) {
+        case 'online':
+            path = 'assets/icons/stream-on-32.png';
+            break;
+            
+        case 'offline':
+            path = 'assets/icons/stream-off-32.png';
+            break;
+            
+        default:
+            path = 'assets/icons/stream-off-32.png';
+    }
+    
+    browser.browserAction.setIcon({ path: path });
+    
 }

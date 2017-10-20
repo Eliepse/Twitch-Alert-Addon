@@ -39,8 +39,10 @@ gulp.task('concat-js', function() {
     }
 
     src.push('src/background_scripts/main.js')
+    src.push('src/background_scripts/helpers.js')
     src.push('src/background_scripts/browser-action-icon.js')
     src.push('src/background_scripts/request.js')
+    src.push('src/background_scripts/notifications.js')
 
     return gulp.src(src)
     .pipe(concat('app.js'))

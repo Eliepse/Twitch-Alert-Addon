@@ -4,4 +4,13 @@ var _app = {
     },
     user : "user_login",
     timeout: 60000,
+    notifications : {
+        live_on: {
+            type: 'basic',
+            title : 'Live en cours !',
+            message: '{user} est actuellement en live.',
+            iconUrl: browser.extension.getURL("assets/icons/stream-on-32.png")
+        }
+    },
+    notify: true
 };
