@@ -1,4 +1,5 @@
 src/config.dev.js
 src/manifest.dev.json
 addon/
+!addon/.gitkeep
 node_modules/
