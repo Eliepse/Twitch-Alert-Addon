@@ -1,8 +1,17 @@
 function showNotification(params) {
     
-    params = hydrateObj(params)
-    
-    chrome.notifications.create(params)
+    chrome.storage.local.get('notifications', function(value) {
+        
+        if(value['notifications'] === false) return;
+        
+        if(_app.notifications || value['notifications']) {
+            
+            params = hydrateObj(params)
+            chrome.notifications.create(params)
+            
+        }
+        
+    });
     
 }
 

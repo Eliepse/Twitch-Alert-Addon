@@ -18,10 +18,15 @@
     "background": {
         "scripts": ["background_scripts/app.js"]
     },
+    
+    "options_ui": {
+        "page": "options_page/options.html"
+    },
 
     "permissions": [
         "https://exemple.com",
-        "notifications"
+        "notifications",
+        "storage"
     ]
 
 }
