@@ -50,6 +50,8 @@ gulp.task('concat-js', function() {
 
 gulp.task('watch', ['make'], function() {
 
-    return watch('./src/**/*.js', ['make']);
+    return watch('./src/**/*.js', function() {
+        gulp.start('make');
+    });
 
 })
