@@ -1,15 +1,26 @@
+// Load when page is loaded
 
-$(function(){
+function ready(fn) {
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+
+
+ready(function() {
     
     restoreOptions();
     
-    $("#notifications").change(function() {
+    document.querySelector('#notifications').addEventListener('change', function() {
         
         saveOptions('notifications', this.checked)
         
-    });
+    })
     
-});
+})
 
 function saveOptions(key, value) {
     
@@ -24,9 +35,8 @@ function restoreOptions() {
 
     chrome.storage.local.get('notifications', function(value) {
         
-        $('#notifications').prop('checked', value['notifications']).change()
+        document.querySelector('#notifications').checked = value['notifications']
         
     });
-
 
 }
