@@ -20,7 +20,8 @@ gulp.task('make', ['concat-js'], function() {
     return gulp.src([
         'src/**',
         '!src/background_scripts/**',
-        '!src/manifest.*'
+        '!src/manifest.*',
+        '!src/config.*'
     ])
     .pipe(gulp.dest('./addon/'));
 
