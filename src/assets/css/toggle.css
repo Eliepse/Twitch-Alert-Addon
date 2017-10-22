@@ -1,0 +1,15 @@
+.toggle {}
+
+.toggle + label { margin-bottom: 0; }
+
+/* toggle unchecked */
+
+.toggle + label .toggle-data-on { display: none; }
+
+.toggle + label .toggle-data-off { display: inline-block; }
+
+/* toggle checked */
+
+.toggle:checked + label .toggle-data-on { display: inline-block; }
+
+.toggle:checked + label .toggle-data-off { display: none; }

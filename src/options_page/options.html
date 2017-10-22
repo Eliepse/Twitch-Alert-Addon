@@ -2,43 +2,61 @@
 
 <head>
     
+    <title>Twitch alert configurations</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap-toggle.min.css" rel="stylesheet">
-    <style>
-    html, body {
-        background-color: inherit;
-    }
-    </style>
+    <link href="../assets/css/toggle.css" rel="stylesheet">
+    
+    <script src="script.js"></script>
     
 </head>
 
 <body>
     
-    <div class="container container-fluid" style="width:100%;">
+    <div class="container">
         
-        <h2>Configurations</h2>
+        <div class=""
+        <div class="row">
+            <div class="col-md-12 mt-5 mb-3">
+                <h1>Twitch alert configurations</h1>
+                <p>Configure the twitch addon configuration</p>
+            </div>
+        </div>
         
-        <div class="row" style="width:100%;">
-            
-            <div class="col-12-md" style="width:100%;">
+        <div class="row">
+                        
+            <div class="col-md-12">
                 
-                <form class="text-right" style="width:100%;">
-
-                    <table class="table table-hover" style="width:100%;">
-                        <tbody>
-                            
-                            <tr>
-                                <td>Notifications</td>
-                                <td><input id="notifications" checked data-toggle="toggle" type="checkbox"></td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                <table class="table table-hover" style="width:100%">
                     
-                </form>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td class="align-middle">
+                                
+                                <strong>Notifications</strong><br/>
+                                Receive a notification when the streamer is streaming.
+                                
+                            </td>
+                            
+                            <td class="align-middle">
+                                
+                                <input id="notifications" class="toggle" autocomplete="false" name="notifications" type="checkbox" hidden>
+                                <label for="notifications">
+                                    <span class="btn btn-primary toggle-data-on">On</span>
+                                    <span class="btn btn-secondary toggle-data-off">Off</span>
+                                </label>
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                    
+                </table>
         
             </div>
         
@@ -47,10 +65,5 @@
     </div>
     
 </body>
-
-<script src="../assets/js/jquery.js"></script>
-<!-- <script src="../assets/js/bootstrap.min.js"></script> -->
-<script src="../assets/js/bootstrap-toggle.min.js"></script>
-<script src="script.js"></script>
 
 </html>
