@@ -1,4 +1,7 @@
 # Twitch Alert
+
+[![GitHub version](https://badge.fury.io/gh/Eliepse%2FTwitch-Alert-Addon.svg)](https://badge.fury.io/gh/Eliepse%2FTwitch-Alert-Addon) [![license](https://img.shields.io/github/license/Eliepse/Twitch-Alert-Addon.svg)](https://github.com/Eliepse/Twitch-Alert-Addon/blob/master/LICENSE)
+
 _Twitch Alert_ is an web browser addon that notify the user when a defined streamer is in live on Twitch.
 
 This plugin is related to the project [Twitch Live Checker](https://github.com/Eliepse/Twitch-Live-Checker) who actually clusterize plugin requests to Twitch.
