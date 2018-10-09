@@ -1,35 +1,28 @@
 {
-    "name": "Twitch-Alert-Addon",
+    "name": "twitch-alert-addon",
     "version": "1.0.2",
     "description": "Twitch Live Alert is the core to make extensions that notify you when a live is on.",
     "main": "index.js",
-    
     "scripts": {
-        "dev" : "cd ./addon && web-ext run",
+        "dev": "cd ./addon && web-ext run",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Eliepse/Twitch-Alert-Addon.git"
     },
-    
     "author": "Eliepse <contact@eliepse.fr>",
     "license": "MIT",
-    
     "bugs": {
         "url": "https://github.com/Eliepse/Twitch-Alert-Addon/issues"
     },
-    
     "homepage": "https://github.com/Eliepse/Twitch-Alert-Addon#readme",
-    
     "devDependencies": {
-        "gulp": "^3.9.1",
+        "gulp": "^4.0.0",
         "gulp-concat": "^2.6.1",
-        "gulp-watch": "^4.3.11",
-        "yargs": "^9.0.1",
-        "gulp-rename": "^1.2.2"
+        "gulp-rename": "^1.2.2",
+        "gulp-watch": "^5.0.1",
+        "yargs": "^12.0.2"
     },
-    
     "dependencies": {}
 }
